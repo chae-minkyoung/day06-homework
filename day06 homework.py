@@ -1,15 +1,10 @@
-def start_end(f):
-    def decorator(*args):
-        print('start')
-        result=f(*args)
-        print(result)
-        return('end')
-    return decorator
-
-def sum(a,b):
-    return (a+b)
-
-print(start_end(sum)(1,2))
-
+try:
+    numbers=input(f"숫자 두개를 입력하세요:")
+    number=numbers.split()
+    a=int(number[0])
+    b=int(number[1])
+    print(a+b)
+except IndexError as OopsException:
+    print(f'Caught an oops')
 
 
